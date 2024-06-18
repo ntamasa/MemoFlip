@@ -8,8 +8,14 @@ function Navigation() {
     <nav className={styles.navbar}>
       <Logo />
 
-      <NavLink to="/rules">Rules</NavLink>
-      <NavLink to="/app">Application</NavLink>
+      <ul>
+        <li>
+          <NavLink to="/rules">Rules</NavLink>
+        </li>
+        <li>
+          <NavLink to="/app">Application</NavLink>
+        </li>
+      </ul>
     </nav>
   );
 }

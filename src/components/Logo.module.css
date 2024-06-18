@@ -1,0 +1,11 @@
+.logo {
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+
+  filter: blur(4px);
+  height: 15rem;
+
+  z-index: -2;
+}

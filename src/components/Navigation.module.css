@@ -1,0 +1,69 @@
+@import url(../variables.css);
+
+.navbar ul {
+  width: 100%;
+
+  padding-left: 2.8rem;
+
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  grid-template-rows: 15rem;
+
+  column-gap: 3.2rem;
+
+  align-items: center;
+  justify-content: center;
+
+  list-style: none;
+}
+
+.navbar ul li a {
+  position: relative;
+
+  font-size: 2rem;
+  font-weight: 800;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  padding: 1.2rem;
+
+  color: #ca728a;
+
+  z-index: 1;
+}
+
+.navbar ul li a,
+.navbar ul li a:after,
+.navbar ul li a:before {
+  transition: all 0.5s;
+}
+
+.navbar ul li a:hover {
+  color: #975567;
+}
+.navbar ul li a:after {
+  display: block;
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  width: 100%;
+  height: 1px;
+
+  background-color: #fc8eac;
+  opacity: 0;
+
+  z-index: -1;
+}
+.navbar ul li a:hover:after {
+  height: 100%;
+  opacity: 1;
+}
+
+.navbar a:global(.active) {
+  color: #e3809b;
+}
