@@ -1,1 +1,44 @@
 @import url(../variables.css);
+
+.header {
+  max-height: 26rem;
+  height: 26rem;
+  max-width: 78.6rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.4rem;
+
+  text-align: center;
+}
+
+.hGroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.subheading {
+  font-size: 1.6rem;
+  font-weight: 600;
+
+  color: var(--color-text);
+}
+
+.heading {
+  font-size: 4.8rem;
+  font-weight: 800;
+  line-height: 120%;
+
+  color: var(--color-text);
+}
+
+.text {
+  font-size: 1.8rem;
+
+  color: var(--color-text);
+}

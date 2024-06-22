@@ -1,0 +1,14 @@
+@import url(../variables.css);
+
+.points {
+  max-height: 86.5rem;
+  height: 86.5rem;
+
+  padding: 11.2rem 6.4rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
+}
