@@ -10,10 +10,10 @@ function Navigation() {
 
       <ul>
         <li>
-          <NavLink to="/rules">Rules</NavLink>
+          <NavLink to="/rules">Home</NavLink>
         </li>
         <li>
-          <NavLink to="/app">Application</NavLink>
+          <NavLink to="/app">Play</NavLink>
         </li>
       </ul>
     </nav>

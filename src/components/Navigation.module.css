@@ -3,7 +3,7 @@
 .navbar ul {
   width: 100%;
 
-  padding-left: 2.8rem;
+  padding: 0;
 
   display: grid;
   grid-template-columns: repeat(2, max-content);

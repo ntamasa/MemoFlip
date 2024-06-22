@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "../App.css";
 import Navigation from "./Navigation";
-import Rules from "./Rules";
-import AppLayout from "./AppLayout";
+import HomePage from "../pages/HomePage";
+import AppLayout from "../pages/AppLayout";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <Navigation />
 
       <Routes>
-        <Route index path="/rules" element={<Rules />} />
+        <Route index path="/rules" element={<HomePage />} />
         <Route path="/app" element={<AppLayout />} />
       </Routes>
     </BrowserRouter>
