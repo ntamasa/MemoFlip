@@ -1,0 +1,15 @@
+@import url(../variables.css);
+
+.socials {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 1.4rem;
+}
+
+.socials > * {
+  transition: all 0.5s;
+}
+
+.socials > *:hover {
+  transform: scale(1.5);
+}
