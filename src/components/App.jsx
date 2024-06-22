@@ -10,7 +10,7 @@ function App() {
       <Navigation />
 
       <Routes>
-        <Route index path="/rules" element={<HomePage />} />
+        <Route index path="/" element={<HomePage />} />
         <Route path="/app" element={<AppLayout />} />
       </Routes>
     </BrowserRouter>
