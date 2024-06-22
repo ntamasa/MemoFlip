@@ -27,7 +27,7 @@
 
   padding: 1.2rem;
 
-  color: var(--color-text-light--2);
+  color: var(--color-text-light);
 
   z-index: 1;
 }
@@ -65,5 +65,5 @@
 }
 
 .navbar a:global(.active) {
-  color: var(--color-text-light);
+  color: var(--color-text-light--2);
 }
