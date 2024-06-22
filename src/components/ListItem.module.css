@@ -1,5 +1,9 @@
 @import url(../variables.css);
 
+* {
+  z-index: 1;
+}
+
 .item {
   height: 100%;
   width: 41rem;

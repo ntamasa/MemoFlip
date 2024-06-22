@@ -1,5 +1,9 @@
 @import url(../variables.css);
 
+* {
+  z-index: 1;
+}
+
 .header {
   max-height: 26rem;
   height: 26rem;
