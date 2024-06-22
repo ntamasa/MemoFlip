@@ -16,11 +16,13 @@
 
 .btnText {
   font-size: 2rem;
+  font-weight: 500;
   color: var(--color-text);
 }
 
 .btnIcon {
   height: 2rem;
+  font-weight: 500;
   stroke: var(--color-text);
 
   transition: all 0.5s;
