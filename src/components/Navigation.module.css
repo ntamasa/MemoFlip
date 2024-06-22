@@ -1,5 +1,9 @@
 @import url(../variables.css);
 
+* {
+  z-index: 1;
+}
+
 .navbar ul {
   width: 100%;
 
