@@ -1,0 +1,32 @@
+@import url(../variables.css);
+
+.item {
+  height: 100%;
+  width: 41rem;
+
+  display: grid;
+  justify-content: center;
+  row-gap: 2.4rem;
+
+  text-align: center;
+}
+
+.icon {
+  height: 5rem;
+  fill: var(--color-primary);
+  margin: 0 auto;
+}
+
+.heading {
+  font-size: 3.2rem;
+  font-weight: 800;
+  line-height: 130%;
+
+  color: var(--color-text);
+}
+
+.text {
+  font-size: 1.6rem;
+
+  color: var(--color-text);
+}
