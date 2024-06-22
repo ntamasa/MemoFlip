@@ -1,0 +1,31 @@
+@import url(../variables.css);
+
+.btn {
+  height: 3.2rem;
+  width: max-content;
+
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  background: transparent;
+  border: none;
+}
+
+.btnText {
+  font-size: 2rem;
+  color: var(--color-text);
+}
+
+.btnIcon {
+  height: 2rem;
+  stroke: var(--color-text);
+
+  transition: all 0.5s;
+}
+
+.btn:hover .btnIcon {
+  transform: rotate(-360deg);
+}
