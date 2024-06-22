@@ -35,3 +35,22 @@
 
   z-index: -1;
 }
+
+.rect {
+  position: absolute;
+  top: 60rem;
+  left: 0;
+
+  transform: rotate(16deg);
+  transform: translateX() translateY();
+
+  filter: blur(300px);
+
+  height: 45rem;
+  width: 45rem;
+  border-radius: 25px;
+
+  background-color: var(--color-primary);
+
+  z-index: -1;
+}
