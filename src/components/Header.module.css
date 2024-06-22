@@ -1,0 +1,38 @@
+@import url(../variables.css);
+
+.header {
+  max-height: 43.6rem;
+  height: 43.6rem;
+  max-width: 76.8rem;
+  width: 76.8rem;
+
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.heading {
+  color: var(--color-text);
+  font-weight: 800;
+  font-size: 5.8rem;
+
+  margin: 0;
+
+  text-align: center;
+
+  line-height: 120%;
+}
+
+.headingText {
+  color: var(--color-text);
+  font-weight: 400;
+  font-size: 1.8rem;
+
+  line-height: 150%;
+
+  text-align: center;
+}

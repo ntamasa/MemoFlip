@@ -1,5 +1,13 @@
 :root {
-  --color-text: #333;
+  --color-text: #653945;
+  --color-text-light: #e3809b;
+  --color-text-light--2: #ca728a;
 
-  --color-primary: #e7e266ee;
+  --color-text-hover: #975567;
+
+  --color-navlink-bg: #fc8eac;
+
+  --color-primary: #fda5bd;
+
+  --color-secondary: ;
 }
