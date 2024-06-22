@@ -1,0 +1,33 @@
+@import url(../variables.css);
+
+.circleBig {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  transform: translateX(50%) translateY(-50%);
+
+  filter: blur(300px);
+
+  height: 200rem;
+  width: 200rem;
+  border-radius: 50%;
+
+  background-color: var(--color-primary);
+}
+
+.circleSmall {
+  position: absolute;
+  bottom: -30%;
+  left: 50%;
+
+  transform: translateX(-50%) translateY(50%);
+
+  filter: blur(300px);
+
+  height: 140rem;
+  width: 140rem;
+  border-radius: 50%;
+
+  background-color: var(--color-primary);
+}

@@ -4,7 +4,7 @@
   left: 50%;
   transform: translateX(-50%);
 
-  filter: blur(4px);
+  filter: blur(3px);
   height: 15rem;
 
   z-index: -2;

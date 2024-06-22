@@ -1,18 +1,22 @@
+import styles from "../components/Circle.module.css";
+
 import Circle from "../components/Circle";
-import Difficulty from "../components/Difficulty";
-import Footer from "../components/Footer";
 import Header from "../components/Header";
+import Difficulty from "../components/Difficulty";
 import Points from "../components/Points";
+import Footer from "../components/Footer";
 
 function Rules() {
   return (
     <>
-      <Circle />
+      <Circle styles={styles.circleBig} />
 
       <Header />
       <Difficulty />
       <Points />
       <Footer />
+
+      <Circle styles={styles.circleSmall} />
     </>
   );
 }
