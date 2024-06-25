@@ -3,10 +3,11 @@ import Card from "./Card";
 
 function Board() {
   return (
-    <div>
-      Board
-      <Card />
-    </div>
+    <main className={styles.board}>
+      {Array.apply(null, Array(30)).map((_, i) => (
+        <Card key={i} />
+      ))}
+    </main>
   );
 }
 

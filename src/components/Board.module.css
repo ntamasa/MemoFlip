@@ -1,4 +1,14 @@
 @import url(../variables.css);
 
 .board {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(6rem, 12.5rem));
+  grid-template-rows: repeat(6, minmax(6rem, 12.5rem));
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 2.4rem;
+
+  margin-bottom: 24rem;
 }

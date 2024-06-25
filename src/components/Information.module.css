@@ -12,7 +12,8 @@
 
   row-gap: 2.4rem;
 
-  padding: 24rem 0;
+  padding-top: 24rem;
+  padding-bottom: 7.2rem;
 }
 
 .time {
@@ -21,6 +22,8 @@
   line-height: 130%;
 
   color: var(--color-text);
+
+  text-shadow: var(--shadow-small)
 }
 
 .scores {
