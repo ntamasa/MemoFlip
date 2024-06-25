@@ -1,1 +1,44 @@
 @import url(../variables.css);
+
+.informations {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, min-content);
+
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  row-gap: 2.4rem;
+
+  padding: 24rem 0;
+}
+
+.time {
+  font-size: 5.6rem;
+  font-weight: 800;
+  line-height: 130%;
+
+  color: var(--color-text);
+}
+
+.scores {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+
+  justify-content: center;
+  align-items: center;
+
+  column-gap: 6rem;
+}
+
+.scores p {
+  width: max-content;
+
+  font-size: 3.2rem;
+  font-weight: 500;
+  line-height: 130%;
+
+  color: var(--color-text);
+}
