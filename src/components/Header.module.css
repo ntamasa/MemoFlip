@@ -25,6 +25,8 @@
   text-align: center;
 
   line-height: 120%;
+
+  text-shadow: var(--shadow-small);
 }
 
 .headingText {

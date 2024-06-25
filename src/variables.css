@@ -10,4 +10,7 @@
   --color-primary: #fda5bd;
 
   --color-secondary: ;
+
+  /* ***** SHADOWS ***** */
+  --shadow-small: 0.2rem 0.2rem 0.5rem rgba(101, 57, 69, 0.2);
 }

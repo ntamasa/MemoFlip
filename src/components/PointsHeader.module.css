@@ -39,6 +39,8 @@
   line-height: 120%;
 
   color: var(--color-text);
+
+  text-shadow: var(--shadow-small);
 }
 
 .text {
