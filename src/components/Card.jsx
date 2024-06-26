@@ -28,13 +28,16 @@ function Card() {
           isUnflipping ? "cardUnflip" : ""
         }`}
         onClick={handleCardClick}
+        // prevent hover triggering handleCardClick
       >
         <div className={`${styles.cardFace} ${styles.cardBack}`}>
           <div className={styles.backMain}>&nbsp;</div>
         </div>
 
         <div className={`${styles.cardFace} ${styles.cardFront}`}>
-          <div className={styles.mainPane}>&nbsp;</div>
+          <div className={styles.mainPane}>
+            <span>😂</span>
+          </div>
         </div>
       </div>
     </div>
