@@ -5,7 +5,7 @@ function PopUpFooter() {
 
   return (
     <footer className={styles.footer}>
-      <Button moreStyles={styles.text} type="later" onClick={handleClick}>
+      <Button type="later" onClick={handleClick}>
         No, I want to play later.
       </Button>
     </footer>

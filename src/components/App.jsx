@@ -3,14 +3,14 @@ import "../App.css";
 import Navigation from "./Navigation";
 import HomePage from "../pages/HomePage";
 import AppLayout from "../pages/AppLayout";
-import PopUpBackground from "./PopUpBackground";
+import PopUpDarken from "./PopUpDarken";
 
 function App() {
   const isActivePopUp = true;
 
   return (
     <BrowserRouter>
-      {isActivePopUp && <PopUpBackground />}
+      {isActivePopUp && <PopUpDarken />}
       <Navigation />
 
       <Routes>

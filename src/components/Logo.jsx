@@ -1,5 +1,5 @@
 import styles from "./Logo.module.css";
-import logo from "../assets/logo.png";
+import logo from "../../public/logo.png";
 
 function Logo({ moreStyles = null }) {
   return (

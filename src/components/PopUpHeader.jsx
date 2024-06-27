@@ -10,7 +10,7 @@ function PopUpHeader() {
     <header className={styles.header}>
       <div className={styles.brand}>
         <p>MemoFlip</p>
-        <Logo />
+        <Logo moreStyles={styles.logo} />
       </div>
 
       <Button type="close" onClick={handleClick} />

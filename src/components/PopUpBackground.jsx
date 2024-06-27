@@ -1,7 +1,13 @@
-import styles from "./PopUpBackground.module.css";
+import imgUrl from "../../public/popup-shapes.png";
 
-function PopUpBackground() {
-  return <div className={styles.popupBackground}>&nbsp;</div>;
+function PopUpBackground({ styles }) {
+  return (
+    <img
+      className={styles.background}
+      src={imgUrl}
+      alt="Background of the section with some abstract 3D geometric shapes."
+    />
+  );
 }
 
 export default PopUpBackground;

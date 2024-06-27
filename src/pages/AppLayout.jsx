@@ -4,6 +4,7 @@ import Object from "../components/Object";
 import Footer from "../components/Footer";
 import Information from "../components/Information";
 import Board from "../components/Board";
+import PopUp from "../components/PopUp";
 
 function AppLayout() {
   return (
@@ -17,6 +18,8 @@ function AppLayout() {
       <Board />
       <Footer />
       <Object styles={styles.circleSmall} />
+
+      <PopUp />
     </>
   );
 }

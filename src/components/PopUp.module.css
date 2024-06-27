@@ -1,1 +1,36 @@
 @import url(../variables.css);
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  transform: translateX(-50%) translateY(-50%);
+
+  width: 55rem;
+  max-width: 55rem;
+  height: 58rem;
+  max-height: 58rem;
+
+  border: 2px solid var(--color-text);
+  border-radius: 2.5rem;
+
+  background-color: var(--color-background);
+
+  /* should be on top of everything  */
+  z-index: 999999;
+
+  overflow: hidden;
+}
+
+.background {
+  width: 100%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translateX(-50%) translateY(-50%);
+
+  z-index: 0;
+}

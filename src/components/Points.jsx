@@ -2,7 +2,7 @@ import styles from "./Points.module.css";
 
 import List from "./List";
 import PointsHeader from "./PointsHeader";
-import Background from "./Background";
+import PointsBackground from "./PointsBackground";
 
 function Points() {
   return (
@@ -10,7 +10,7 @@ function Points() {
       <PointsHeader />
       <List />
 
-      <Background styles={styles} />
+      <PointsBackground styles={styles} />
     </section>
   );
 }

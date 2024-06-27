@@ -1,17 +1,32 @@
 import styles from "./PopUpMain.module.css";
 
 function PopUpMain() {
-  const isWin = true;
+  const isWin = false;
 
   return (
     <main className={styles.main}>
       <h2 className={styles.heading}>
-        {isWin ? "Congratulations! 😁" : "Time's Up! ⌛ Better luck next time!"}
+        {isWin ? (
+          <>Congratulations! 😁</>
+        ) : (
+          <>
+            Time&apos;s Up! ⌛<br />
+            Better luck next time!
+          </>
+        )}
       </h2>
       <p className={styles.text}>
-        {isWin
-          ? `Amazing job! You've matched all the pairs in ${10} tries and scored ${3} points! 🎉`
-          : `Don't give up! You matched ${10} pairs and scored ${3} points. Try to match them all next time! 💪`}
+        {isWin ? (
+          <>
+            Amazing job! You&apos;ve matched all the pairs in
+            <strong>10</strong> tries and scored <strong>3</strong> points! 🎉
+          </>
+        ) : (
+          <>
+            Don&apos;t give up! You matched <strong>10</strong> pairs and scored
+            <strong>3</strong> points. Try to match them all next time! 😋
+          </>
+        )}
       </p>
     </main>
   );
