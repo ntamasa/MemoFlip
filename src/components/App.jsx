@@ -3,10 +3,12 @@ import "../App.css";
 import Navigation from "./Navigation";
 import HomePage from "../pages/HomePage";
 import AppLayout from "../pages/AppLayout";
+import PopUpBackground from "./PopUpBackground";
 
 function App() {
   return (
     <BrowserRouter>
+      <PopUpBackground />
       <Navigation />
 
       <Routes>
