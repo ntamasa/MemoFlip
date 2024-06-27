@@ -11,6 +11,8 @@
 
   --color-secondary: ;
 
+  --color-background: #fff1f5;
+
   /* ***** SHADOWS ***** */
   --shadow-small: 0.2rem 0.2rem 0.5rem rgba(101, 57, 69, 0.2);
 }

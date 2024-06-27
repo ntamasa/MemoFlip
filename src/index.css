@@ -1,3 +1,5 @@
+@import url(./variables.css);
+
 /* Box sizing rules */
 *,
 *::before,
@@ -43,7 +45,7 @@ body {
   line-height: 1.5;
   margin: 0;
 
-  background-color: #fff1f5;
+  background-color: var(--color-background);
 }
 
 /* Set shorter line heights on headings and interactive elements */
