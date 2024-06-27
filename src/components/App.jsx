@@ -6,9 +6,11 @@ import AppLayout from "../pages/AppLayout";
 import PopUpBackground from "./PopUpBackground";
 
 function App() {
+  const isActivePopUp = true;
+
   return (
     <BrowserRouter>
-      <PopUpBackground />
+      {isActivePopUp && <PopUpBackground />}
       <Navigation />
 
       <Routes>
