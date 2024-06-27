@@ -1,6 +1,6 @@
-import imgUrl from "../assets/points-background.png";
+import imgUrl from "../../public/points-background.png";
 
-function Background({ styles }) {
+function HomeBackground({ styles }) {
   return (
     <img
       className={styles.background}
@@ -10,4 +10,4 @@ function Background({ styles }) {
   );
 }
 
-export default Background;
+export default HomeBackground;
