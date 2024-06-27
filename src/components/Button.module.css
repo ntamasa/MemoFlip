@@ -12,6 +12,8 @@
 
   background: transparent;
   border: none;
+
+  cursor: pointer;
 }
 
 .btnText {
@@ -30,4 +32,80 @@
 
 .btn:hover .btnIcon {
   transform: rotate(-360deg);
+}
+
+/* --------------- */
+/* CLOSE BUTTON */
+.close {
+  cursor: pointer;
+
+  position: relative;
+
+  width: 3.5rem;
+  height: 3.5rem;
+
+  margin-right: 2.6rem;
+
+  background-color: transparent;
+
+  border: none;
+
+  transition: transform 0.25s ease-in-out;
+}
+
+.close:before {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: rotate(-45deg);
+
+  width: 100%;
+  height: 0.2rem;
+
+  background-color: var(--color-text);
+}
+
+.close:after {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: rotate(45deg);
+
+  width: 100%;
+  height: 0.2rem;
+
+  background-color: var(--color-text);
+}
+
+.close:hover {
+  transform: rotate(180deg);
+}
+
+.close:active {
+  transform: scale(0.8) rotate(180deg) translateY(10%);
+}
+
+/* ------------------ */
+/* LATER ON POPUP */
+
+.later {
+  cursor: pointer;
+
+  font-size: 1.4rem;
+  font-weight: 300;
+
+  text-align: center;
+
+  color: var(--color-text);
+
+  background: none;
+  border: none;
+}
+
+.later:hover {
+  text-decoration: underline;
 }
