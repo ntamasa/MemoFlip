@@ -17,7 +17,7 @@ function Difficulty() {
             </p>
           </div>
 
-          <Button />
+          <Button>Play</Button>
         </article>
 
         <article className={styles.col}>
@@ -32,7 +32,7 @@ function Difficulty() {
             </p>
           </div>
 
-          <Button />
+          <Button>Play</Button>
         </article>
       </div>
     </section>

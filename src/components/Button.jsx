@@ -1,9 +1,23 @@
 import styles from "./Button.module.css";
 
-function Button({ onClick }) {
+function Button({ onClick, children, moreStyles = null, type = null }) {
+  if (type === "close")
+    return (
+      <button className={styles.close} onClick={onClick}>
+        &nbsp;
+      </button>
+    );
+
+  if (type === "later")
+    return (
+      <button className={styles.later} onClick={onClick}>
+        No, I want to play later.
+      </button>
+    );
+
   return (
-    <button className={styles.btn} onClick={onClick}>
-      <p className={styles.btnText}>Play</p>
+    <button className={`${styles.btn} ${moreStyles}`} onClick={onClick}>
+      <p className={styles.btnText}>{children}</p>
       <svg
         className={styles.btnIcon}
         xmlns="http://www.w3.org/2000/svg"
