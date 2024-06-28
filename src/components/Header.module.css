@@ -1,43 +1,58 @@
 @import url(../variables.css);
 
+.header {
+  width: 37.5rem;
+  max-width: 37.5rem;
+  height: 33rem;
+  max-height: 33rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 2.4rem;
+  padding: 0 2rem;
+
+  margin: 0 auto;
+}
+
+.heading {
+  font-size: 3.6rem;
+  font-weight: 800;
+  line-height: 120%;
+
+  text-align: center;
+
+  color: var(--color-text);
+  text-shadow: var(--shadow-small);
+
+  margin: 0;
+}
+
+.headingText {
+  font-size: 1.4rem;
+  font-weight: 400;
+
+  text-align: center;
+
+  color: var(--color-text);
+}
+
 /* 1440px */
 @media screen and (min-width: 90em) {
   .header {
-    max-height: 43.6rem;
-    height: 43.6rem;
-    max-width: 76.8rem;
     width: 76.8rem;
-
-    margin: 0 auto;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2.4rem;
+    max-width: 76.8rem;
+    height: 43.6rem;
+    max-height: 43.6rem;
   }
 
   .heading {
-    color: var(--color-text);
-    font-weight: 800;
     font-size: 5.8rem;
-
-    margin: 0;
-
-    text-align: center;
-
-    line-height: 120%;
-
-    text-shadow: var(--shadow-small);
   }
 
   .headingText {
-    color: var(--color-text);
-    font-weight: 400;
     font-size: 1.8rem;
-
-    line-height: 150%;
-
-    text-align: center;
   }
 }
