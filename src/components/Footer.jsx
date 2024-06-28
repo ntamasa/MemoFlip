@@ -8,7 +8,8 @@ function Footer() {
       <p className={styles.copyright}>
         &copy; 2024 MemoFlip. All rights reserved!
       </p>
-      <Logo />
+      <Logo moreStyles={styles.logo} />
+      <hr className={styles.divider} />
       <Socials />
     </footer>
   );
