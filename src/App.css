@@ -1,8 +1,8 @@
 #root {
   position: relative;
 
-  max-width: 100%;
   width: 100%;
+  max-width: 100%;
   min-height: 100vh;
 
   overflow: hidden;

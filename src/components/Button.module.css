@@ -127,6 +127,8 @@
   padding: 0;
 
   border: none;
+
+  justify-self: end;
 }
 
 .hamburger span {
@@ -178,4 +180,12 @@
 :global(.hamburgerOpen)::after {
   top: 50%;
   transform: rotate(-45deg);
+}
+
+@media screen and (min-width: 90em) {
+  /* hide it */
+  .hamburger {
+    visibility: hidden;
+    position: absolute;
+  }
 }

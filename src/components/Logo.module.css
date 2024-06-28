@@ -1,11 +1,21 @@
 .logo {
   position: absolute;
-  top: 1rem;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(-50%);
 
   filter: blur(3px);
   height: 15rem;
 
   z-index: 0;
+
+  transition: all 0.5s ease-out;
+}
+
+:global(.dropped) .logo {
+  height: 11rem;
+  top: 50%;
+  left: 10%;
+
+  transform: translateY(-50%);
 }

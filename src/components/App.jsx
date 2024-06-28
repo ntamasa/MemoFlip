@@ -6,7 +6,7 @@ import AppLayout from "../pages/AppLayout";
 import PopUpDarken from "./PopUpDarken";
 
 function App() {
-  const isActivePopUp = true;
+  const isActivePopUp = false;
 
   return (
     <BrowserRouter>
