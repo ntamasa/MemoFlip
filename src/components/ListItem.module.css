@@ -5,12 +5,10 @@
 }
 
 .item {
-  height: 100%;
-  width: 41rem;
-
   display: grid;
+
   justify-content: center;
-  row-gap: 2.4rem;
+  row-gap: 2rem;
 
   text-align: center;
 }
@@ -33,4 +31,10 @@
   font-size: 1.6rem;
 
   color: var(--color-text);
+}
+
+@media screen and (min-width: 90em) {
+  .item {
+    row-gap: 2.4rem;
+  }
 }

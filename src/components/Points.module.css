@@ -3,16 +3,17 @@
 .points {
   position: relative;
 
-  max-height: 86.5rem;
-  height: 86.5rem;
+  height: 147.5rem;
+  max-height: 147.5rem;
 
-  padding: 11.2rem 6.4rem;
+  padding: 6.4rem 2rem;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 8rem;
+
+  gap: 4.8rem;
 }
 
 .background {
@@ -25,4 +26,15 @@
   transform: translateX(-50%) translateY(-50%);
 
   z-index: 0;
+}
+
+@media screen and (min-width: 90em) {
+  .points {
+    height: 86.5rem;
+    max-height: 86.5rem;
+
+    padding: 11.2rem 6.4rem;
+
+    gap: 8rem;
+  }
 }

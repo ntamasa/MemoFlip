@@ -5,15 +5,15 @@
 }
 
 .header {
-  max-height: 26rem;
-  height: 26rem;
-  max-width: 78.6rem;
+  width: 100%;
+  height: 33rem;
+  max-height: 33rem;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2.4rem;
+  gap: 2rem;
 
   text-align: center;
 }
@@ -23,7 +23,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1.6rem;
+  gap: 1.2rem;
 }
 
 .subheading {
@@ -34,7 +34,7 @@
 }
 
 .heading {
-  font-size: 4.8rem;
+  font-size: 3.6rem;
   font-weight: 800;
   line-height: 120%;
 
@@ -44,7 +44,55 @@
 }
 
 .text {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
+  font-weight: 400;
 
   color: var(--color-text);
+}
+
+@media screen and (min-width: 90em) {
+  .header {
+    height: 26rem;
+    max-height: 26rem;
+    max-width: 78.6rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.4rem;
+
+    text-align: center;
+  }
+
+  .hGroup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.6rem;
+  }
+
+  .subheading {
+    font-size: 1.6rem;
+    font-weight: 600;
+
+    color: var(--color-text);
+  }
+
+  .heading {
+    font-size: 4.8rem;
+    font-weight: 800;
+    line-height: 120%;
+
+    color: var(--color-text);
+
+    text-shadow: var(--shadow-small);
+  }
+
+  .text {
+    font-size: 1.8rem;
+
+    color: var(--color-text);
+  }
 }

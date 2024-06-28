@@ -9,10 +9,21 @@
   padding: 0;
   margin: 0;
 
-  height: 30rem;
-  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 32 rem);
 
-  display: flex;
-  justify-content: space-around;
   align-items: center;
+
+  row-gap: 2.4rem;
+}
+
+@media screen and (min-width: 90em) {
+  .list {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 30rem;
+
+    justify-content: space-around;
+    row-gap: 0;
+  }
 }
