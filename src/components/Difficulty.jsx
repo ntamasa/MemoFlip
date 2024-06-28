@@ -8,12 +8,12 @@ function Difficulty() {
         <article className={styles.col}>
           <div className={styles.content}>
             <h2 className={styles.heading}>
-              Normal Difficulty: Match Pairs on a 5x5 Board in 4 Minutes
+              Normal Difficulty: Match Pairs on a 5x6 Board in 4 Minutes
             </h2>
             <p className={styles.text}>
-              Challenge your memory with our standard 5x5 board. You have 4
-              minutes to match all the pairs. Can you beat the clock and show
-              off your memory skills?
+              Challenge your memory with our standard 5x6 board. You have{" "}
+              <strong>4 minutes</strong> to match all the pairs. Can you beat
+              the clock and show off your memory skills?
             </p>
           </div>
 
@@ -23,12 +23,13 @@ function Difficulty() {
         <article className={styles.col}>
           <div className={styles.content}>
             <h2 className={styles.heading}>
-              Hard Difficulty: Master the 10x10 Board in 7.5 Minutes
+              Hard Difficulty: Master the 5x6 Board in 7.5 Minutes
             </h2>
             <p className={styles.text}>
-              Take your memory skills to the next level with our challenging
-              10x10 board. You have 7.5 minutes to find all the pairs. Do you
-              have what it takes to conquer this ultimate challenge?
+              Take your memory skills to the next level with our challenging 5x6
+              board. You have <strong>7.5 minutes</strong> to find all the
+              pairs. Do you have what it takes to conquer this ultimate
+              challenge?
             </p>
           </div>
 

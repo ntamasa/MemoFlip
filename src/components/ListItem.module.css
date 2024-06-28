@@ -33,7 +33,7 @@
   color: var(--color-text);
 }
 
-@media screen and (min-width: 90em) {
+@media screen and (min-width: 50em) {
   .item {
     row-gap: 2.4rem;
   }

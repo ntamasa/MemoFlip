@@ -1,8 +1,11 @@
 @import url(../variables.css);
 
+* {
+  z-index: 1;
+}
+
 .header {
   width: 100%;
-  height: 33rem;
   max-height: 33rem;
 
   display: flex;
@@ -13,7 +16,7 @@
   gap: 2.4rem;
   padding: 0 2rem;
 
-  margin: 0 auto;
+  margin: 5rem auto;
 }
 
 .heading {
@@ -27,6 +30,8 @@
   text-shadow: var(--shadow-small);
 
   margin: 0;
+
+  z-index: 1;
 }
 
 .headingText {
@@ -36,14 +41,15 @@
   text-align: center;
 
   color: var(--color-text);
+
+  z-index: 1;
 }
 
-/* 1440px */
-@media screen and (min-width: 90em) {
+/* 1000px */
+@media screen and (min-width: 50em) {
   .header {
     width: 76.8rem;
     max-width: 76.8rem;
-    height: 43.6rem;
     max-height: 43.6rem;
   }
 

@@ -106,7 +106,7 @@
   color: var(--color-text-light);
 }
 
-@media screen and (max-width: 90em) {
+@media screen and (max-width: 50em) {
   .navbar .logo {
     height: 6.5rem;
 
@@ -120,7 +120,7 @@
 }
 
 /* 1440px */
-@media screen and (min-width: 90em) {
+@media screen and (min-width: 50em) {
   .navbar {
     display: block;
   }

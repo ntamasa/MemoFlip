@@ -5,8 +5,9 @@ function Header() {
     <header className={styles.header}>
       <h1 className={styles.heading}>The Ultimate Memory Challenge</h1>
       <p className={styles.headingText}>
-        Sharpen your mind and have fun with MemoFlip. Choose your difficulty,
-        test your memory, and see how many points you can score!
+        Sharpen your mind and have fun with <strong>MemoFlip</strong>. Choose
+        your difficulty, <u>test your memory</u>, and see how many points you
+        can score!
       </p>
     </header>
   );

@@ -3,10 +3,7 @@
 .points {
   position: relative;
 
-  height: 147.5rem;
-  max-height: 147.5rem;
-
-  padding: 6.4rem 2rem;
+  padding: 6.4rem 5%;
 
   display: flex;
   flex-direction: column;
@@ -14,6 +11,8 @@
   align-items: center;
 
   gap: 4.8rem;
+
+  overflow: hidden;
 }
 
 .background {
@@ -25,15 +24,20 @@
 
   transform: translateX(-50%) translateY(-50%);
 
-  z-index: 0;
+  z-index: -1;
 }
 
-@media screen and (min-width: 90em) {
-  .points {
-    height: 86.5rem;
-    max-height: 86.5rem;
+/* 600 */
+@media screen and (min-width: 37.5em) {
+  .background {
+    top: 15%;
+  }
+}
 
-    padding: 11.2rem 6.4rem;
+/* 800 */
+@media screen and (min-width: 50em) {
+  .points {
+    padding: 11.2rem 10%;
 
     gap: 8rem;
   }
