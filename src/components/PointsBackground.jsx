@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import imgUrl from "../../public/points-background.png";
-import smallImgUrl from "../../public/points-background.png";
+import smallImgUrl from "../../public/small-points-background.png";
 
 function HomeBackground({ styles }) {
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 1440);

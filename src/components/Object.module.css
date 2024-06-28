@@ -1,16 +1,17 @@
 @import url(../variables.css);
 
 .circleBig {
+  height: 160rem;
+  width: 160rem;
+
   position: absolute;
   top: 0;
-  right: 0;
+  right: -40rem;
 
   transform: translateX(50%) translateY(-50%);
 
   filter: blur(300px);
 
-  height: 200rem;
-  width: 200rem;
   border-radius: 50%;
 
   background-color: var(--color-primary);
@@ -20,15 +21,15 @@
 
 .circleSmall {
   position: absolute;
-  bottom: -30%;
+  bottom: 2.5%;
   left: 50%;
 
   transform: translateX(-50%) translateY(50%);
 
-  filter: blur(300px);
+  filter: blur(200px);
 
-  height: 140rem;
-  width: 140rem;
+  height: 60rem;
+  width: 60rem;
   border-radius: 50%;
 
   background-color: var(--color-primary);
@@ -38,13 +39,13 @@
 
 .rect {
   position: absolute;
-  top: 60rem;
-  left: 0;
+  top: 85rem;
+  left: -20rem;
 
   transform: rotate(16deg);
   transform: translateX() translateY();
 
-  filter: blur(300px);
+  filter: blur(200px);
 
   height: 45rem;
   width: 45rem;
@@ -55,20 +56,57 @@
   z-index: -1;
 }
 
-.circlePopUp {
-  position: absolute;
-  top: 0%;
-  right: 0%;
+@media screen and (min-width: 90em) {
+  .circleBig {
+    right: 0;
 
-  transform: translateX(50%) translateY(-50%);
+    height: 200rem;
+    width: 200rem;
+  }
 
-  filter: blur(200px);
+  .circleSmall {
+    bottom: -30%;
 
-  height: 100rem;
-  width: 100rem;
-  border-radius: 50%;
+    filter: blur(300px);
 
-  background-color: var(--color-primary);
+    height: 140rem;
+    width: 140rem;
+  }
 
-  z-index: -1;
+  .rect {
+    position: absolute;
+    top: 60rem;
+    left: 0;
+
+    transform: rotate(16deg);
+    transform: translateX() translateY();
+
+    filter: blur(300px);
+
+    height: 45rem;
+    width: 45rem;
+    border-radius: 25px;
+
+    background-color: var(--color-primary);
+
+    z-index: -1;
+  }
+
+  .circlePopUp {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+
+    transform: translateX(50%) translateY(-50%);
+
+    filter: blur(200px);
+
+    height: 100rem;
+    width: 100rem;
+    border-radius: 50%;
+
+    background-color: var(--color-primary);
+
+    z-index: -1;
+  }
 }
