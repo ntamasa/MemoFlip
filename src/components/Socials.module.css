@@ -3,7 +3,7 @@
 .socials {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  column-gap: 1.4rem;
+  column-gap: 2.4rem;
 }
 
 .socials > * {
@@ -12,4 +12,17 @@
 
 .socials > *:hover {
   transform: scale(1.5);
+}
+
+@media screen and (max-width: 90em) {
+  .socials {
+    column-gap: 0.5rem;
+  }
+  .socials a {
+    justify-self: center;
+  }
+
+  .socials > *:hover {
+    transform: scale(1.25);
+  }
 }
