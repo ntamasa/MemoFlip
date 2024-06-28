@@ -1,9 +1,12 @@
 import styles from "./Button.module.css";
 
 function Button({ onClick, children, moreStyles = null, type = null }) {
-  if (type === "close")
+  if (type === "close" || type == "hamburger")
     return (
-      <button className={styles.close} onClick={onClick}>
+      <button
+        className={type === "close" ? styles.close : styles.hamburger}
+        onClick={onClick}
+      >
         &nbsp;
       </button>
     );

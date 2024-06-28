@@ -53,7 +53,7 @@
   transition: transform 0.25s ease-in-out;
 }
 
-.close:before {
+.close::before {
   content: "";
 
   position: absolute;
@@ -67,7 +67,7 @@
   background-color: var(--color-text);
 }
 
-.close:after {
+.close::after {
   content: "";
 
   position: absolute;
@@ -108,4 +108,74 @@
 
 .later:hover {
   text-decoration: underline;
+}
+
+/* ----------------- */
+/* Hamburger menu */
+
+.hamburger {
+  position: relative;
+
+  width: 2.5rem;
+  height: 2rem;
+
+  background-color: transparent;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0;
+
+  border: none;
+}
+
+.hamburger span {
+  width: 100%;
+  height: 0.2rem;
+
+  background-color: var(--color-text);
+
+  transition: all 0.5s ease-out;
+}
+
+.hamburger::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 0.2rem;
+
+  background-color: var(--color-text);
+
+  transition: all 0.5s ease-out;
+}
+
+.hamburger::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 0.2rem;
+
+  background-color: var(--color-text);
+
+  transition: all 0.5s ease-out;
+}
+
+:global(.hamburgerOpen) span {
+  transform: scale(0);
+}
+
+:global(.hamburgerOpen)::before {
+  top: 50%;
+  transform: rotate(45deg);
+}
+
+:global(.hamburgerOpen)::after {
+  top: 50%;
+  transform: rotate(-45deg);
 }
