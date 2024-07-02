@@ -78,3 +78,9 @@
     gap: 8rem;
   }
 }
+
+@media screen and (max-width: 21.875em) {
+  .buttons {
+    gap: 5%;
+  }
+}
