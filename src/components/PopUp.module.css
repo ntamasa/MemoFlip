@@ -7,10 +7,8 @@
 
   transform: translateX(-50%) translateY(-50%);
 
-  width: 55rem;
-  max-width: 55rem;
-  height: 58rem;
-  max-height: 58rem;
+  width: 95%;
+  max-width: 95%;
 
   border: 2px solid var(--color-text);
   border-radius: 2.5rem;
@@ -33,4 +31,18 @@
   transform: translateX(-50%) translateY(-50%);
 
   z-index: 0;
+}
+
+/* 750px */
+@media screen and (min-width: 46.875em) {
+  .popup {
+    width: 55rem;
+    max-width: 55rem;
+
+    border-radius: 2.5rem;
+  }
+
+  .background {
+    width: 100%;
+  }
 }

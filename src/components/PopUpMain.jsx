@@ -2,11 +2,14 @@ import styles from "./PopUpMain.module.css";
 
 function PopUpMain() {
   const isWin = false;
+  const isEnd = false;
 
   return (
     <main className={styles.main}>
       <h2 className={styles.heading}>
-        {isWin ? (
+        {!isEnd ? (
+          <>Ready to Test Your Memory?</>
+        ) : isWin ? (
           <>Congratulations! 😁</>
         ) : (
           <>
@@ -16,7 +19,9 @@ function PopUpMain() {
         )}
       </h2>
       <p className={styles.text}>
-        {isWin ? (
+        {!isEnd ? (
+          <>Select your preferred diffuculty and start playing!</>
+        ) : isWin ? (
           <>
             Amazing job! You&apos;ve matched all the pairs in
             <strong>10</strong> tries and scored <strong>3</strong> points! 🎉

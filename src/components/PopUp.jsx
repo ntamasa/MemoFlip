@@ -10,15 +10,16 @@ import PopUpBackground from "./PopUpBackground";
 
 function PopUp() {
   const isWin = false;
+  const isEnd = false;
 
   return (
     <div className={styles.popup}>
-      <Object styles={objectStyles.circlePopUp} />
+      {/* <Object styles={objectStyles.circlePopUp} /> */}
 
       <PopUpHeader />
       <PopUpMain />
-      <PopUpActions>
-        {isWin ? "Up for another round?" : "Want to try again?"}
+      <PopUpActions isEnd={isEnd}>
+        {!isEnd ? "" : isWin ? "Up for another round?" : "Want to try again?"}
       </PopUpActions>
       <PopUpFooter />
 

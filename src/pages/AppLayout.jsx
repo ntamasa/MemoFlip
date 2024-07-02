@@ -19,7 +19,7 @@ function AppLayout() {
       <Footer />
       <Object styles={styles.circleSmall} />
 
-      {/* <PopUp /> */}
+      <PopUp />
     </>
   );
 }
