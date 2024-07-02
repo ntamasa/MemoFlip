@@ -56,6 +56,24 @@
   z-index: -1;
 }
 
+.circlePopUp {
+  position: absolute;
+  top: 50%;
+  right: -30%;
+
+  transform: translateX(50%) translateY(-50%);
+
+  filter: blur(150px);
+
+  height: 55rem;
+  width: 55rem;
+  border-radius: 50%;
+
+  background-color: var(--color-primary);
+
+  z-index: -1;
+}
+
 /* 750px */
 @media screen and (min-width: 46.875em) {
   .circleBig {
@@ -75,39 +93,13 @@
   }
 
   .rect {
-    position: absolute;
     top: 60rem;
     left: 0;
 
-    transform: rotate(16deg);
-    transform: translateX() translateY();
-
     filter: blur(300px);
-
-    height: 45rem;
-    width: 45rem;
-    border-radius: 25px;
-
-    background-color: var(--color-primary);
-
-    z-index: -1;
   }
 
   .circlePopUp {
-    position: absolute;
-    top: 0%;
-    right: 0%;
-
-    transform: translateX(50%) translateY(-50%);
-
     filter: blur(200px);
-
-    height: 100rem;
-    width: 100rem;
-    border-radius: 50%;
-
-    background-color: var(--color-primary);
-
-    z-index: -1;
   }
 }
