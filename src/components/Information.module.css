@@ -10,20 +10,21 @@
 
   text-align: center;
 
-  row-gap: 2.4rem;
+  row-gap: 1.8rem;
 
-  padding-top: 24rem;
-  padding-bottom: 7.2rem;
+  padding: 4rem 5%;
+
+  padding-top: 6rem;
 }
 
 .time {
-  font-size: 5.6rem;
+  font-size: 3.2rem;
   font-weight: 800;
   line-height: 130%;
 
   color: var(--color-text);
 
-  text-shadow: var(--shadow-small)
+  text-shadow: var(--shadow-small);
 }
 
 .scores {
@@ -39,9 +40,27 @@
 .scores p {
   width: max-content;
 
-  font-size: 3.2rem;
+  font-size: 1.8rem;
   font-weight: 500;
   line-height: 130%;
 
   color: var(--color-text);
+}
+
+/* 1440px */
+@media screen and (min-width: 90em) {
+  .informations {
+    row-gap: 2.4rem;
+
+    padding-top: 14rem;
+    padding-bottom: 7.2rem;
+  }
+
+  .time {
+    font-size: 5.6rem;
+  }
+
+  .scores p {
+    font-size: 3.2rem;
+  }
 }
