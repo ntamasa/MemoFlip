@@ -56,7 +56,8 @@
   z-index: -1;
 }
 
-@media screen and (min-width: 50em) {
+/* 750px */
+@media screen and (min-width: 46.875em) {
   .circleBig {
     right: 0;
 

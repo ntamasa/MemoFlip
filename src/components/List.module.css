@@ -18,8 +18,8 @@
   row-gap: 2.4rem;
 }
 
-/* 800px */
-@media screen and (min-width: 50em) {
+/* 750px */
+@media screen and (min-width: 46.875em) {
   .list {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 30rem);

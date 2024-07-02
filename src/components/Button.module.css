@@ -182,7 +182,8 @@
   transform: rotate(-45deg);
 }
 
-@media screen and (min-width: 50em) {
+/* 750px */
+@media screen and (min-width: 46.875em) {
   /* hide it */
   .hamburger {
     visibility: hidden;

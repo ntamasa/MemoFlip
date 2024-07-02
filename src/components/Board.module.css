@@ -10,17 +10,17 @@
 
   gap: 1rem;
 
-  margin-bottom: 24rem;
+  margin-bottom: 6rem;
 }
 
-/* 1440px */
-@media screen and (min-width: 90em) {
+/* 750px */
+@media screen and (min-width: 46.875em) {
   .board {
     grid-template-columns: repeat(5, 12.5rem);
     grid-template-rows: repeat(6, 12.5rem);
 
     gap: 2.4rem;
 
-    margin-bottom: 24rem;
+    margin-bottom: 12rem;
   }
 }

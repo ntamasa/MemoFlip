@@ -1,13 +1,17 @@
 @import url(../variables.css);
 
 .socials {
-  width: 60%;
-
-  margin: 0 auto;
+  width: 100%;
 
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  column-gap: 2.4rem;
+
+  justify-content: space-between;
+}
+
+.socials a {
+  display: flex;
+  justify-content: center;
 }
 
 .socials > * {
@@ -18,8 +22,13 @@
   transform: scale(1.5);
 }
 
-@media screen and (max-width: 50em) {
+/* 750px */
+@media screen and (max-width: 46.875em) {
   .socials {
+    width: 60%;
+
+    margin: 0 auto;
+
     column-gap: 0.5rem;
   }
   .socials a {

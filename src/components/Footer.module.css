@@ -30,7 +30,9 @@
 
   grid-row: 4 / -1;
 }
-@media screen and (max-width: 50em) {
+
+/* 750px */
+@media screen and (max-width: 46.875em) {
   .footer .logo {
     position: relative;
 
@@ -56,10 +58,11 @@
   }
 }
 
-@media screen and (min-width: 50em) {
+/* 750px */
+@media screen and (min-width: 46.875em) {
   .footer {
     display: grid;
-    grid-template-columns: repeat(2, max-content);
+    grid-template-columns: repeat(2, 30rem);
     grid-template-rows: 20rem;
 
     justify-content: space-around;

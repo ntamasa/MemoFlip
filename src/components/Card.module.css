@@ -150,7 +150,8 @@
   font-size: 2.4rem;
 }
 
-@media screen and (min-width: 90em) {
+/* 750px */
+@media screen and (min-width: 46.875em) {
   .backMain {
     background-size: 400%;
   }

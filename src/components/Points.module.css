@@ -34,8 +34,8 @@
   }
 }
 
-/* 800 */
-@media screen and (min-width: 50em) {
+/* 750 */
+@media screen and (min-width: 46.875em) {
   .points {
     padding: 11.2rem 10%;
 
