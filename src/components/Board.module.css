@@ -24,3 +24,11 @@
     margin-bottom: 12rem;
   }
 }
+
+/* 350px */
+@media screen and (max-width: 21.875em) {
+  .board {
+    grid-template-columns: repeat(5, 4.2rem);
+    grid-template-rows: repeat(6, 4.2rem);
+  }
+}

@@ -64,3 +64,14 @@
     font-size: 3.2rem;
   }
 }
+
+/* 350px */
+@media screen and (max-width: 21.875em) {
+  .time {
+    font-size: 2.4rem;
+  }
+
+  .scores p {
+    font-size: 1.4rem;
+  }
+}

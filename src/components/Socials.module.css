@@ -39,3 +39,10 @@
     transform: scale(1.25);
   }
 }
+
+/* 350px */
+@media screen and (max-width: 21.875em) {
+  .socials {
+    width: 100%;
+  }
+}

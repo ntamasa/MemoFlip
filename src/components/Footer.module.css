@@ -81,3 +81,10 @@
     grid-column: 2 / 3;
   }
 }
+
+/* 350px */
+@media screen and (max-width: 21.875em) {
+  .copyright {
+    font-size: 1.2rem;
+  }
+}
