@@ -2,7 +2,7 @@ import styles from "./Card.module.css";
 
 import { useState } from "react";
 
-function Card() {
+function Card({ children, id }) {
   const [isFlipped, setIsFlipped] = useState(false);
   const [isUnflipping, setIsUnflipping] = useState(false);
 
@@ -28,7 +28,6 @@ function Card() {
           isUnflipping ? "cardUnflip" : ""
         }`}
         onClick={handleCardClick}
-        // prevent hover triggering handleCardClick
       >
         <div className={`${styles.cardFace} ${styles.cardBack}`}>
           <div className={styles.backMain}>&nbsp;</div>
@@ -36,7 +35,7 @@ function Card() {
 
         <div className={`${styles.cardFace} ${styles.cardFront}`}>
           <div className={styles.mainPane}>
-            <span>😂</span>
+            <span>{children}</span>
           </div>
         </div>
       </div>
