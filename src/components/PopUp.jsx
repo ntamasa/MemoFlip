@@ -10,7 +10,7 @@ import PopUpBackground from "./PopUpBackground";
 
 function PopUp() {
   const isWin = false;
-  const isEnd = true;
+  const isEnd = false;
 
   return (
     <div className={styles.popup}>

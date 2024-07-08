@@ -1,33 +1,13 @@
 import styles from "./Card.module.css";
 
-import { useState } from "react";
-
-function Card({ children, id }) {
-  const [isFlipped, setIsFlipped] = useState(false);
-  const [isUnflipping, setIsUnflipping] = useState(false);
-
-  const handleCardClick = (e) => {
-    e.stopPropagation();
-
-    if (isFlipped) {
-      setIsUnflipping(true);
-
-      setTimeout(() => {
-        setIsFlipped(false);
-        setIsUnflipping(false);
-      }, 500);
-    } else {
-      setIsFlipped(true);
-    }
-  };
-
+function Card({ children, onClick, isFlipped, isUnflipping }) {
   return (
     <div className={styles.cardScene}>
       <div
         className={`${styles.card} ${isFlipped ? "cardUnflipped" : ""} ${
           isUnflipping ? "cardUnflip" : ""
         }`}
-        onClick={handleCardClick}
+        onClick={onClick}
       >
         <div className={`${styles.cardFace} ${styles.cardBack}`}>
           <div className={styles.backMain}>&nbsp;</div>

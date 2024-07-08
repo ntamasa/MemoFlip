@@ -7,19 +7,18 @@ import Board from "../components/Board";
 import PopUp from "../components/PopUp";
 
 function AppLayout() {
+  const isActivePopUp = false;
+
   return (
     <>
       <Object styles={styles.circleBig} />
-
       <Information />
-
       <Object styles={styles.rect} />
-
       <Board />
       <Footer />
       <Object styles={styles.circleSmall} />
 
-      <PopUp />
+      {isActivePopUp && <PopUp />}
     </>
   );
 }
