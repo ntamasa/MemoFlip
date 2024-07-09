@@ -20,7 +20,7 @@ const gameSlice = createSlice({
   name: "game",
   initialState,
   reducers: {
-    start(state, action) {
+    start(state) {
       // shuffle cards
       state.content = shuffleCards([...data]);
     },

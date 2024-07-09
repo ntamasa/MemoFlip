@@ -1,13 +1,34 @@
+import { useDispatch, useSelector } from "react-redux";
 import styles from "./Card.module.css";
+import { clickCard } from "./gameSlice";
 
-function Card({ children, onClick, isFlipped, isUnflipping }) {
+function Card({ children, index }) {
+  const dispatch = useDispatch();
+  const { flippedCards, unFlipping, correctPairs, isDisabled } = useSelector(
+    (store) => store.game
+  );
+
+  const isFlipped =
+    flippedCards.some((card) => card.index === index) ||
+    correctPairs.some((card) => card.index === index);
+  const isUnflipping = unFlipping.some((card) => card.index === index);
+
+  // click handler
+  const handleClick = () => {
+    if (
+      !isDisabled ||
+      flippedCards.some((card) => card.index !== index) ||
+      correctPairs.some((card) => card.index !== index)
+    )
+      dispatch(clickCard(index));
+  };
+
   return (
-    <div className={styles.cardScene}>
+    <div className={styles.cardScene} onClick={handleClick}>
       <div
         className={`${styles.card} ${isFlipped ? "cardUnflipped" : ""} ${
           isUnflipping ? "cardUnflip" : ""
         }`}
-        onClick={onClick}
       >
         <div className={`${styles.cardFace} ${styles.cardBack}`}>
           <div className={styles.backMain}>&nbsp;</div>
