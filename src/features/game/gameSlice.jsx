@@ -7,9 +7,10 @@ const initialState = {
   unFlipping: [],
   correctPairs: [],
   isDisabled: false,
-  time: 450,
+  time: 10,
   points: 0,
   tries: 0,
+  status: "",
 };
 
 function shuffleCards(arr) {
@@ -23,6 +24,8 @@ const gameSlice = createSlice({
     start(state) {
       // shuffle cards
       state.content = shuffleCards([...data]);
+      state.isDisabled = false;
+      state.status = "gaming";
     },
     clickCard(state, action) {
       // if an already flipped or just disabled action DO NOTHING
@@ -60,9 +63,16 @@ const gameSlice = createSlice({
       state.flippedCards = [];
       state.isDisabled = false;
     },
+    tick(state) {
+      if (state.time !== 0) state.time--;
+      else {
+        state.status = "finished";
+        state.isDisabled = true;
+      }
+    },
   },
 });
 
 export default gameSlice.reducer;
 
-export const { start, clickCard, disable, unflip } = gameSlice.actions;
+export const { start, clickCard, disable, unflip, tick } = gameSlice.actions;
