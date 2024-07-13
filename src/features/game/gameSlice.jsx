@@ -7,10 +7,11 @@ const initialState = {
   unFlipping: [],
   correctPairs: [],
   isDisabled: false,
-  time: 10,
+  time: 450,
   points: 0,
   tries: 0,
-  status: "",
+  status: "starting",
+  activePopUp: false,
 };
 
 function shuffleCards(arr) {
@@ -21,11 +22,26 @@ const gameSlice = createSlice({
   name: "game",
   initialState,
   reducers: {
-    start(state) {
+    start(state, action) {
+      if (!action.payload) {
+        state.activePopUp = true;
+        return;
+      }
+
       // shuffle cards
       state.content = shuffleCards([...data]);
-      state.isDisabled = false;
       state.status = "gaming";
+      state.isDisabled = false;
+      state.activePopUp = false;
+
+      if (action.payload === "normal") state.time = 450;
+
+      if (action.payload === "hard") state.time = 280;
+    },
+    finish(state) {
+      state.status = "finished";
+      state.isDisabled = true;
+      state.activePopUp = true;
     },
     clickCard(state, action) {
       // if an already flipped or just disabled action DO NOTHING
@@ -64,15 +80,16 @@ const gameSlice = createSlice({
       state.isDisabled = false;
     },
     tick(state) {
-      if (state.time !== 0) state.time--;
-      else {
-        state.status = "finished";
-        state.isDisabled = true;
-      }
+      state.time--;
+    },
+    closePopUp(state) {
+      state.activePopUp = false;
+      state.isDisabled = true;
     },
   },
 });
 
 export default gameSlice.reducer;
 
-export const { start, clickCard, disable, unflip, tick } = gameSlice.actions;
+export const { start, finish, clickCard, disable, unflip, tick, closePopUp } =
+  gameSlice.actions;

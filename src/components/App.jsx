@@ -4,13 +4,14 @@ import Navigation from "./Navigation";
 import HomePage from "../pages/HomePage";
 import AppLayout from "../pages/AppLayout";
 import PopUpDarken from "./PopUpDarken";
+import { useSelector } from "react-redux";
 
 function App() {
-  const isActivePopUp = false;
+  const { activePopUp } = useSelector((store) => store.game);
 
   return (
     <BrowserRouter>
-      {isActivePopUp && <PopUpDarken />}
+      {activePopUp && <PopUpDarken />}
       <Navigation />
 
       <Routes>

@@ -1,7 +1,20 @@
-import Button from "./Button";
 import styles from "./PopUpFooter.module.css";
+
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+
+import Button from "./Button";
+
+import { closePopUp } from "../features/game/gameSlice";
+
 function PopUpFooter() {
-  function handleClick() {}
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  function handleClick() {
+    dispatch(closePopUp());
+    navigate("/");
+  }
 
   return (
     <footer className={styles.footer}>

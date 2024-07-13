@@ -1,13 +1,14 @@
+import { useSelector } from "react-redux";
 import styles from "./PopUpMain.module.css";
 
 function PopUpMain() {
-  const isWin = false;
-  const isEnd = false;
+  const { status, content, correctPairs } = useSelector((store) => store.game);
+  const isWin = correctPairs.length === content.length;
 
   return (
     <main className={styles.main}>
       <h2 className={styles.heading}>
-        {!isEnd ? (
+        {status !== "finished" ? (
           <>Ready to Test Your Memory?</>
         ) : isWin ? (
           <>Congratulations! 😁</>
@@ -19,7 +20,7 @@ function PopUpMain() {
         )}
       </h2>
       <p className={styles.text}>
-        {!isEnd ? (
+        {status !== "finished" ? (
           <>Select your preferred diffuculty and start playing!</>
         ) : isWin ? (
           <>

@@ -3,22 +3,26 @@ import styles from "./Information.module.css";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { tick } from "../features/game/gameSlice";
+import { tick, finish } from "../features/game/gameSlice";
 
 function Information() {
-  const { time, points, tries } = useSelector((store) => store.game);
+  const { time, points, tries, status } = useSelector((store) => store.game);
   const dispatch = useDispatch();
 
   const mins = Math.floor(time / 60);
   const secs = time % 60;
 
   useEffect(() => {
+    if (status !== "gaming") return;
+
+    if (time === 0) dispatch(finish());
+
     const timer = setInterval(() => {
       dispatch(tick());
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [dispatch]);
+  }, [dispatch, time, status]);
 
   return (
     <header className={styles.informations}>

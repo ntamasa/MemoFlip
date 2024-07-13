@@ -1,7 +1,16 @@
 import styles from "./Difficulty.module.css";
 import Button from "./Button";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { start } from "../features/game/gameSlice";
 
 function Difficulty() {
+  const navigate = useNavigate();
+
+  function handleClick() {
+    navigate("app");
+  }
+
   return (
     <section className={styles.difficulty}>
       <div className={styles.box}>
@@ -17,7 +26,7 @@ function Difficulty() {
             </p>
           </div>
 
-          <Button>Play</Button>
+          <Button onClick={handleClick}>Play</Button>
         </article>
 
         <article className={styles.col}>
@@ -33,7 +42,7 @@ function Difficulty() {
             </p>
           </div>
 
-          <Button>Play</Button>
+          <Button onClick={handleClick}>Play</Button>
         </article>
       </div>
     </section>

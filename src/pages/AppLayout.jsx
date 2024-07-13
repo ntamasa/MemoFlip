@@ -5,9 +5,10 @@ import Footer from "../components/Footer";
 import Information from "../components/Information";
 import Board from "../features/game/Board";
 import PopUp from "../components/PopUp";
+import { useSelector } from "react-redux";
 
 function AppLayout() {
-  const isActivePopUp = false;
+  const { status, activePopUp } = useSelector((store) => store.game);
 
   return (
     <>
@@ -18,7 +19,9 @@ function AppLayout() {
       <Footer />
       <Object styles={styles.circleSmall} />
 
-      {isActivePopUp && <PopUp />}
+      {activePopUp && (status === "finished" || status === "starting") && (
+        <PopUp />
+      )}
     </>
   );
 }

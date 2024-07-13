@@ -7,10 +7,12 @@ import PopUpMain from "./PopUpMain";
 import PopUpActions from "./PopUpActions";
 import PopUpFooter from "./PopUpFooter";
 import PopUpBackground from "./PopUpBackground";
+import { useSelector } from "react-redux";
 
 function PopUp() {
-  const isWin = false;
-  const isEnd = false;
+  const { content, correctPairs, status } = useSelector((store) => store.game);
+
+  const isWin = correctPairs.length === content.length;
 
   return (
     <div className={styles.popup}>
@@ -18,8 +20,12 @@ function PopUp() {
 
       <PopUpHeader />
       <PopUpMain />
-      <PopUpActions isEnd={isEnd}>
-        {!isEnd ? "" : isWin ? "Up for another round?" : "Want to try again?"}
+      <PopUpActions>
+        {status !== "finished"
+          ? ""
+          : isWin
+          ? "Up for another round?"
+          : "Want to try again?"}
       </PopUpActions>
       <PopUpFooter />
 
