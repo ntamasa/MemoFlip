@@ -1,23 +1,27 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "../App.css";
+
+import SpinnerFullPage from "./SpinnerFullPage";
 import Navigation from "./Navigation";
-import HomePage from "../pages/HomePage";
-import AppLayout from "../pages/AppLayout";
-import PopUpDarken from "./PopUpDarken";
-import { useSelector } from "react-redux";
+import { lazy, Suspense } from "react";
+import Footer from "./Footer";
 
 function App() {
-  const { activePopUp } = useSelector((store) => store.game);
+  const HomePage = lazy(() => import("../pages/HomePage"));
+  const AppLayout = lazy(() => import("../pages/AppLayout"));
 
   return (
     <BrowserRouter>
-      {activePopUp && <PopUpDarken />}
       <Navigation />
 
-      <Routes>
-        <Route index path="/" element={<HomePage />} />
-        <Route path="/app" element={<AppLayout />} />
-      </Routes>
+      <Suspense fallback={<SpinnerFullPage />}>
+        <Routes>
+          <Route index path="/" element={<HomePage />} />
+          <Route path="/app" element={<AppLayout />} />
+        </Routes>
+      </Suspense>
+
+      <Footer />
     </BrowserRouter>
   );
 }

@@ -1,5 +1,6 @@
 import styles from "../components/Object.module.css";
 
+import PopUpDarken from "../components/PopUpDarken";
 import Object from "../components/Object";
 import Footer from "../components/Footer";
 import Information from "../components/Information";
@@ -12,11 +13,13 @@ function AppLayout() {
 
   return (
     <>
+      {activePopUp && <PopUpDarken />}
+
       <Object styles={styles.circleBig} />
       <Information />
       <Object styles={styles.rect} />
       <Board />
-      <Footer />
+      {/* <Footer /> */}
       <Object styles={styles.circleSmall} />
 
       {activePopUp && (status === "finished" || status === "starting") && (

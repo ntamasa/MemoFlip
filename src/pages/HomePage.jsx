@@ -17,7 +17,7 @@ function Rules() {
 
       <Difficulty />
       <Points />
-      <Footer />
+      {/* <Footer /> */}
 
       <Object styles={styles.circleSmall} />
     </>
