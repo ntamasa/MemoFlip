@@ -4,7 +4,6 @@ import Object from "../components/Object";
 import Header from "../components/Header";
 import Difficulty from "../components/Difficulty";
 import Points from "../components/Points";
-import Footer from "../components/Footer";
 
 function Rules() {
   return (
@@ -17,7 +16,6 @@ function Rules() {
 
       <Difficulty />
       <Points />
-      {/* <Footer /> */}
 
       <Object styles={styles.circleSmall} />
     </>

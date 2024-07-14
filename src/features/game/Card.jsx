@@ -1,8 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
+import { memo } from "react";
+
 import styles from "./Card.module.css";
 import { clickCard } from "./gameSlice";
 
-function Card({ children, index }) {
+const Card = memo(function Card({ children, index }) {
   const dispatch = useDispatch();
   const { flippedCards, unFlipping, correctPairs, isDisabled } = useSelector(
     (store) => store.game
@@ -42,6 +44,6 @@ function Card({ children, index }) {
       </div>
     </div>
   );
-}
+});
 
 export default Card;

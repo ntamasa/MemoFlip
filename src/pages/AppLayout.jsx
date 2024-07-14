@@ -2,7 +2,6 @@ import styles from "../components/Object.module.css";
 
 import PopUpDarken from "../components/PopUpDarken";
 import Object from "../components/Object";
-import Footer from "../components/Footer";
 import Information from "../components/Information";
 import Board from "../features/game/Board";
 import PopUp from "../components/PopUp";
@@ -19,7 +18,6 @@ function AppLayout() {
       <Information />
       <Object styles={styles.rect} />
       <Board />
-      {/* <Footer /> */}
       <Object styles={styles.circleSmall} />
 
       {activePopUp && (status === "finished" || status === "starting") && (

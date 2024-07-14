@@ -2,7 +2,9 @@ import { useSelector } from "react-redux";
 import styles from "./PopUpMain.module.css";
 
 function PopUpMain() {
-  const { status, content, correctPairs } = useSelector((store) => store.game);
+  const { status, content, correctPairs, points, tries } = useSelector(
+    (store) => store.game
+  );
   const isWin = correctPairs.length === content.length;
 
   return (
@@ -25,12 +27,14 @@ function PopUpMain() {
         ) : isWin ? (
           <>
             Amazing job! You&apos;ve matched all the pairs in
-            <strong>10</strong> tries and scored <strong>3</strong> points! 🎉
+            <strong>{tries}</strong> tries and scored <strong>{points}</strong>{" "}
+            points! 🎉
           </>
         ) : (
           <>
-            Don&apos;t give up! You matched <strong>10</strong> pairs and scored
-            <strong>3</strong> points. Try to match them all next time! 😋
+            Don&apos;t give up! You matched <strong>{correctPairs / 2}</strong>{" "}
+            pairs and scored <strong>3</strong> points. Try to match them all
+            next time! 😋
           </>
         )}
       </p>
