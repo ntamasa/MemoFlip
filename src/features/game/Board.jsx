@@ -24,7 +24,7 @@ function Board() {
     // wait 1.5s before another action
     const timer = setTimeout(() => {
       dispatch(calcResults());
-    }, 1500);
+    }, 0);
 
     return () => clearTimeout(timer);
   }, [dispatch, flippedCards]);

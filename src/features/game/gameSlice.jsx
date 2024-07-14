@@ -36,7 +36,7 @@ const gameSlice = createSlice({
       }
 
       // shuffle cards
-      state.content = shuffleCards([...data]);
+      // state.content = shuffleCards([...data]);
       state.status = "gaming";
       state.isDisabled = false;
       state.activePopUp = false;
