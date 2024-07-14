@@ -15,6 +15,7 @@ const initialState = {
   correctPairs: [],
   isDisabled: false,
   time: 450,
+  fullTime: 450,
   points: 0,
   tries: 0,
   status: "starting",
@@ -29,6 +30,16 @@ const gameSlice = createSlice({
   name: "game",
   initialState,
   reducers: {
+    init(state) {
+      state.flippedCards = [];
+      state.unFlipping = [];
+      state.correctPairs = [];
+      state.isDisabled = false;
+      state.points = 0;
+      state.tries = 0;
+      state.activePopUp = false;
+      state.status = "starting";
+    },
     start(state, action) {
       if (!action.payload) {
         state.activePopUp = true;
@@ -42,10 +53,19 @@ const gameSlice = createSlice({
       state.activePopUp = false;
       state.tries = 0;
       state.points = 0;
+      state.flippedCards = [];
+      state.correctPairs = [];
+      state.unFlipping = [];
 
-      if (action.payload === "normal") state.time = 450;
+      if (action.payload === "normal") {
+        state.time = 450;
+        state.fullTime = 450;
+      }
 
-      if (action.payload === "hard") state.time = 280;
+      if (action.payload === "hard") {
+        state.time = 280;
+        state.fullTime = 280;
+      }
     },
     finish(state) {
       state.status = "finished";
@@ -126,4 +146,5 @@ export const {
   tick,
   closePopUp,
   move,
+  init,
 } = gameSlice.actions;

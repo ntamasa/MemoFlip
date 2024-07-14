@@ -2,10 +2,13 @@ import { useSelector } from "react-redux";
 import styles from "./PopUpMain.module.css";
 
 function PopUpMain() {
-  const { status, content, correctPairs, points, tries } = useSelector(
+  const { status, content, correctPairs, points, time, fullTime } = useSelector(
     (store) => store.game
   );
   const isWin = correctPairs.length === content.length;
+  const finishTime = fullTime - time;
+  const mins = Math.floor(finishTime / 60);
+  const secs = finishTime % 60;
 
   return (
     <main className={styles.main}>
@@ -26,9 +29,9 @@ function PopUpMain() {
           <>Select your preferred diffuculty and start playing!</>
         ) : isWin ? (
           <>
-            Amazing job! You&apos;ve matched all the pairs in
-            <strong>{tries}</strong> tries and scored <strong>{points}</strong>{" "}
-            points! 🎉
+            Amazing job! You&apos;ve matched <strong>all</strong> the pairs in{" "}
+            <strong>{`${mins}:${secs < 10 ? `0${secs}` : secs}`} </strong> and
+            scored <strong>{points}</strong> points! 🎉
           </>
         ) : (
           <>
