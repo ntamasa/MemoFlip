@@ -1,10 +1,10 @@
 import styles from "./Board.module.css";
 import Card from "./Card";
 
-import { useDispatch, useSelector } from "react-redux";
-import { disable, start, unflip } from "./gameSlice.jsx";
-
 import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+
+import { disable, start, move, calcResults } from "./gameSlice.jsx";
 
 function Board() {
   const dispatch = useDispatch();
@@ -17,11 +17,13 @@ function Board() {
   useEffect(() => {
     if (flippedCards.length !== 2) return;
 
+    // add a try to all for converting points
+    dispatch(move());
     dispatch(disable());
 
     // wait 1.5s before another action
     const timer = setTimeout(() => {
-      dispatch(unflip());
+      dispatch(calcResults());
     }, 1500);
 
     return () => clearTimeout(timer);

@@ -1,6 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { data } from "../../assets/cardData.js";
 
+const MAX_POINT_UPPER_BOUND = 5;
+const MIN_POINT_LOWER_BOUND = 10;
+
+const MAX_POINT = 5;
+const MEDIUM_POINT = 3;
+const MIN_POINT = 1;
+
 const initialState = {
   content: data,
   flippedCards: [],
@@ -33,6 +40,8 @@ const gameSlice = createSlice({
       state.status = "gaming";
       state.isDisabled = false;
       state.activePopUp = false;
+      state.tries = 0;
+      state.points = 0;
 
       if (action.payload === "normal") state.time = 450;
 
@@ -57,24 +66,41 @@ const gameSlice = createSlice({
       state.unFlipping = [];
 
       state.flippedCards = [
-        ...state.flippedCards,
         {
           index: action.payload,
           id: state.content[action.payload].id,
         },
+        ...state.flippedCards,
       ];
+    },
+    move(state) {
+      state.tries++;
     },
     disable(state) {
       // initially disable flipping another card
       state.isDisabled = true;
     },
-    unflip(state) {
+    calcResults(state, action) {
       const [firstCard, secondCard] = state.flippedCards;
 
-      // matching
-      if (firstCard.id !== secondCard.id) state.unFlipping = state.flippedCards;
       // does not match
-      else state.correctPairs = [...state.correctPairs, ...state.flippedCards];
+      if (firstCard.id !== secondCard.id) {
+        state.unFlipping = state.flippedCards;
+        // state.status = "unflipping";
+      }
+      // matching
+      else {
+        state.correctPairs = [...state.correctPairs, ...state.flippedCards];
+
+        // calcPoints
+        console.log(action.payload);
+        if (state.tries < MAX_POINT_UPPER_BOUND) state.points += MAX_POINT;
+        else if (state.tries > MIN_POINT_LOWER_BOUND) state.points += MIN_POINT;
+        else state.points += MEDIUM_POINT;
+
+        state.tries = 0;
+        state.isDisabled = false;
+      }
 
       state.flippedCards = [];
       state.isDisabled = false;
@@ -91,5 +117,13 @@ const gameSlice = createSlice({
 
 export default gameSlice.reducer;
 
-export const { start, finish, clickCard, disable, unflip, tick, closePopUp } =
-  gameSlice.actions;
+export const {
+  start,
+  finish,
+  clickCard,
+  disable,
+  calcResults,
+  tick,
+  closePopUp,
+  move,
+} = gameSlice.actions;
