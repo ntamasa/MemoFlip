@@ -63,7 +63,7 @@ MemoFlip is a card memory game where players can choose the difficulty level by 
 
 ## Usage
 
-1. Open your browser and navigate to `http://localhost:3000`.
+1. Open your browser and navigate to `http://localhost:5173`.
 2. Select the difficulty level by choosing the time limit of the game.
 3. Play the game by flipping cards and matching pairs.
 4. Use the navigation bar to view the rules or start a new game.
