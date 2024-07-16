@@ -107,7 +107,7 @@
   justify-content: space-between;
   flex: 1;
 
-  background-image: url("../../public/brain.jpg");
+  background-image: url("/public/brain.jpg");
   background-size: 700%;
   background-position: center;
 
