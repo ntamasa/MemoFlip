@@ -45,6 +45,7 @@
   height: 3.5rem;
 
   margin-right: 2.6rem;
+  padding: 0;
 
   background-color: transparent;
 
@@ -89,6 +90,14 @@
   transform: scale(0.8) rotate(180deg) translateY(10%);
 }
 
+:global(.dropped) .close {
+  margin: 0;
+
+  position: absolute;
+  top: 2.25rem;
+  right: 2.25rem;
+}
+
 /* ------------------ */
 /* LATER ON POPUP */
 
@@ -114,7 +123,9 @@
 /* Hamburger menu */
 
 .hamburger {
-  position: relative;
+  position: absolute;
+  top: 2.25rem;
+  right: 2.25rem;
 
   width: 2.5rem;
   height: 2rem;
@@ -168,25 +179,11 @@
   transition: all 0.5s ease-out;
 }
 
-:global(.hamburgerOpen) span {
-  transform: scale(0);
-}
-
-:global(.hamburgerOpen)::before {
-  top: 50%;
-  transform: rotate(45deg);
-}
-
-:global(.hamburgerOpen)::after {
-  top: 50%;
-  transform: rotate(-45deg);
-}
-
 /* 750px */
 @media screen and (min-width: 46.875em) {
   /* hide it */
   .hamburger {
     visibility: hidden;
-    position: absolute;
+    /* position: absolute; */
   }
 }

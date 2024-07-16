@@ -1,18 +1,10 @@
 import styles from "./Button.module.css";
 
 function Button({ onClick, children, moreStyles = null, type = null }) {
-  const isOpen = false;
-
   if (type === "close" || type === "hamburger")
     return (
       <button
-        className={
-          type === "close"
-            ? styles.close
-            : `${styles.hamburger} ${moreStyles} ${
-                isOpen ? "hamburgerOpen" : ""
-              }`
-        }
+        className={type === "close" ? styles.close : styles.hamburger}
         onClick={onClick}
       >
         <span>&nbsp;</span>
