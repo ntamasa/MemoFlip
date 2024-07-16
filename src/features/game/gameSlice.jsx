@@ -31,6 +31,9 @@ const gameSlice = createSlice({
   name: "game",
   initialState,
   reducers: {
+    init() {
+      return initialState;
+    },
     start(state, action) {
       if (!action.payload) {
         state.activePopUp = true;

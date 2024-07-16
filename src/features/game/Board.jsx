@@ -11,6 +11,7 @@ function Board() {
   const { content, flippedCards } = useSelector((store) => store.game);
 
   useEffect(() => {
+    dispatch(init());
     dispatch(start());
   }, [dispatch]);
 
