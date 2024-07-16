@@ -1,4 +1,4 @@
-import styles from "./PopUpFooter.module.css";
+import styles from "../assets/css/PopUpFooter.module.css";
 
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";

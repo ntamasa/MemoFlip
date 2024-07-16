@@ -1,4 +1,4 @@
-import styles from "../components/Object.module.css";
+import styles from "../assets/css/Object.module.css";
 
 import Object from "../components/Object";
 import Header from "../components/Header";

@@ -1,11 +1,12 @@
-import styles from "../components/Object.module.css";
+import styles from "../assets/css/Object.module.css";
+
+import { useSelector } from "react-redux";
 
 import PopUpDarken from "../components/PopUpDarken";
 import Object from "../components/Object";
 import Information from "../components/Information";
 import Board from "../features/game/Board";
 import PopUp from "../components/PopUp";
-import { useSelector } from "react-redux";
 
 function AppLayout() {
   const { status, activePopUp } = useSelector((store) => store.game);

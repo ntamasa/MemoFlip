@@ -1,6 +1,6 @@
-import TrophyIcon from "../assets/TrophyIcon";
-import ThumbsUpIcon from "../assets/ThumbsUpIcon";
-import MarkIcon from "../assets/MarkIcon";
+import TrophyIcon from "./TrophyIcon";
+import ThumbsUpIcon from "./ThumbsUpIcon";
+import MarkIcon from "./MarkIcon";
 
 const listItems = [
   {

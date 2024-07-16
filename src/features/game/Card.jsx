@@ -1,7 +1,8 @@
+import styles from "../../assets/css/Card.module.css";
+
 import { useDispatch, useSelector } from "react-redux";
 import { memo } from "react";
 
-import styles from "./Card.module.css";
 import { clickCard } from "./gameSlice";
 
 const Card = memo(function Card({ children, index }) {

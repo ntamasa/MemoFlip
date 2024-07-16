@@ -1,4 +1,4 @@
-import styles from "./PointsHeader.module.css";
+import styles from "../assets/css/PointsHeader.module.css";
 
 function PointsHeader() {
   return (

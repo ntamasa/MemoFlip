@@ -1,4 +1,4 @@
-import styles from "./ListItem.module.css";
+import styles from "../assets/css/ListItem.module.css";
 
 function ListItem({ icon: Icon, heading, text }) {
   return (

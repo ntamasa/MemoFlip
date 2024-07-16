@@ -1,7 +1,9 @@
-import styles from "./Difficulty.module.css";
-import Button from "./Button";
+import styles from "../assets/css/Difficulty.module.css";
+
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
+
+import Button from "./Button";
 import { init } from "../features/game/gameSlice";
 
 function Difficulty() {

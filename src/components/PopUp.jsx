@@ -1,5 +1,7 @@
-import styles from "./PopUp.module.css";
-import objectStyles from "./Object.module.css";
+import styles from "../assets/css/PopUp.module.css";
+import objectStyles from "../assets/css/Object.module.css";
+
+import { useSelector } from "react-redux";
 
 import Object from "./Object";
 import PopUpHeader from "./PopUpHeader";
@@ -7,7 +9,6 @@ import PopUpMain from "./PopUpMain";
 import PopUpActions from "./PopUpActions";
 import PopUpFooter from "./PopUpFooter";
 import PopUpBackground from "./PopUpBackground";
-import { useSelector } from "react-redux";
 
 function PopUp() {
   const { content, correctPairs, status } = useSelector((store) => store.game);

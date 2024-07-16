@@ -1,6 +1,7 @@
-import styles from "./List.module.css";
+import styles from "../assets/css/List.module.css";
+
 import ListItem from "./ListItem";
-import listItems from "../assets/listItems.js";
+import listItems from "../assets/js/listItems.js";
 
 function List() {
   return (

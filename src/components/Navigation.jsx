@@ -1,9 +1,10 @@
+import styles from "../assets/css/Navigation.module.css";
+
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
-import styles from "./Navigation.module.css";
 import Logo from "./Logo";
 import Button from "./Button";
-import { useState } from "react";
 
 function Navigation() {
   const [isOpen, setIsOpen] = useState(false);

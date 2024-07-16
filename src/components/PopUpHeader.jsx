@@ -1,4 +1,4 @@
-import styles from "./PopUpHeader.module.css";
+import styles from "../assets/css/PopUpHeader.module.css";
 
 import Logo from "./Logo";
 import Button from "./Button";

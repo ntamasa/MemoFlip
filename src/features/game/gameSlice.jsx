@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { data } from "../../assets/cardData.js";
+
+import { data } from "../../assets/js/cardData.js";
 
 const MAX_POINT_UPPER_BOUND = 5;
 const MIN_POINT_LOWER_BOUND = 10;
@@ -30,16 +31,6 @@ const gameSlice = createSlice({
   name: "game",
   initialState,
   reducers: {
-    init(state) {
-      state.flippedCards = [];
-      state.unFlipping = [];
-      state.correctPairs = [];
-      state.isDisabled = false;
-      state.points = 0;
-      state.tries = 0;
-      state.activePopUp = false;
-      state.status = "starting";
-    },
     start(state, action) {
       if (!action.payload) {
         state.activePopUp = true;

@@ -1,10 +1,10 @@
-import styles from "./Board.module.css";
+import styles from "../../assets/css/Board.module.css";
 import Card from "./Card";
 
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { disable, start, move, calcResults } from "./gameSlice.jsx";
+import { disable, start, move, calcResults, init } from "./gameSlice.jsx";
 
 function Board() {
   const dispatch = useDispatch();
@@ -24,7 +24,7 @@ function Board() {
     // wait 1.5s before another action
     const timer = setTimeout(() => {
       dispatch(calcResults());
-    }, 0);
+    }, 1500);
 
     return () => clearTimeout(timer);
   }, [dispatch, flippedCards]);

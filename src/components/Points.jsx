@@ -1,4 +1,4 @@
-import styles from "./Points.module.css";
+import styles from "../assets/css/Points.module.css";
 
 import List from "./List";
 import PointsHeader from "./PointsHeader";

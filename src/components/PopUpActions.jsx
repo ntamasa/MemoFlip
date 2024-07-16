@@ -1,6 +1,8 @@
+import styles from "../assets/css/PopUpActions.module.css";
+
 import { useDispatch, useSelector } from "react-redux";
+
 import Button from "./Button";
-import styles from "./PopUpActions.module.css";
 import { start } from "../features/game/gameSlice";
 
 function PopUpActions({ children }) {

@@ -1,4 +1,4 @@
-import styles from "./Information.module.css";
+import styles from "../assets/css/Information.module.css";
 
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";

@@ -1,5 +1,6 @@
+import styles from "../assets/css/PopUpMain.module.css";
+
 import { useSelector } from "react-redux";
-import styles from "./PopUpMain.module.css";
 
 function PopUpMain() {
   const { status, content, correctPairs, points, time, fullTime } = useSelector(

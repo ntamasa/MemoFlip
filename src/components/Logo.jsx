@@ -1,4 +1,5 @@
-import styles from "./Logo.module.css";
+import styles from "../assets/css/Logo.module.css";
+
 import logo from "../../public/logo.png";
 
 function Logo({ moreStyles = "" }) {

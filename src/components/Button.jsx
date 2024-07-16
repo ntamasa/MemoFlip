@@ -1,4 +1,4 @@
-import styles from "./Button.module.css";
+import styles from "../assets/css/Button.module.css";
 
 function Button({ onClick, children, moreStyles = null, type = null }) {
   if (type === "close" || type === "hamburger")

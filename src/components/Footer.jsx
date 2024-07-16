@@ -1,4 +1,5 @@
-import styles from "./Footer.module.css";
+import styles from "../assets/css/Footer.module.css";
+
 import Logo from "./Logo";
 import Socials from "./Socials";
 
