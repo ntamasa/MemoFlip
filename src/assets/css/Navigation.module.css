@@ -55,14 +55,6 @@
   transform: translateY(-10rem);
 }
 
-.navbar ul li:nth-of-type(1) {
-  grid-row: 2 / 3;
-}
-
-.navbar ul li:nth-of-type(2) {
-  grid-row: 3 / 4;
-}
-
 :global(.dropped) ul li {
   opacity: 1;
   transform: translateY(0);
@@ -125,6 +117,14 @@
     transform: translateX(0);
 
     filter: blur(1px);
+  }
+
+  .navbar ul li:nth-of-type(1) {
+    grid-row: 2 / 3;
+  }
+
+  .navbar ul li:nth-of-type(2) {
+    grid-row: 3 / 4;
   }
 }
 
