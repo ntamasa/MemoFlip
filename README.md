@@ -13,6 +13,7 @@ MemoFlip is a single-page application (SPA) memory game built with React. The ga
   - [Usage](#usage)
   - [Screenshots](#screenshots)
   - [License](#license)
+  - [Future](#future)
 
 ## Introduction
 
@@ -81,5 +82,7 @@ MemoFlip is a card memory game where players can choose the difficulty level by 
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Future
 
 This project is no longer maintained and will not receive any future updates.
