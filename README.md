@@ -11,7 +11,7 @@ MemoFlip is a single-page application (SPA) memory game built with React. The ga
   - [Features](#features)
   - [Installation](#installation)
   - [Usage](#usage)
-  - [Contributing](#contributing)
+  - [Screenshots](#screenshots)
   - [License](#license)
 
 ## Introduction
@@ -68,10 +68,18 @@ MemoFlip is a card memory game where players can choose the difficulty level by 
 3. Play the game by flipping cards and matching pairs.
 4. Use the navigation bar to view the rules or start a new game.
 
-## Contributing
+## Screenshots
 
-Contributions are welcome! Please fork this repository and submit a pull request for any improvements or bug fixes.
+1. Main window
+   ![Main window on desktop](/README_assets/desktop.jpg)
+   ![Main window on mobile](/README_assets/mobile.jpg)
+2. Popup notifications on game status and start menu
+   ![Start menu](/README_assets/start.png)
+   ![You won notification](/README_assets/win.png)
+   ![You lost notification](/README_assets/lost.png)
 
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+This project is no longer maintained and will not receive any future updates.
